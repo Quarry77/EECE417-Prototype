@@ -1,10 +1,10 @@
-package parking;
+package parkingspot;
 
 import java.io.IOException;
 import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
-public class Parking_prototypeServlet extends HttpServlet {
+public class ParkingPrototypeServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/plain");

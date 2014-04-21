@@ -22,7 +22,7 @@
 	<style type="text/css">
 		html { height: 100% }
 		body { height: 100%; margin: 0; padding: 0 }
-		#map-canvas { height: 400px; width: 500px }
+		#map-canvas { height: 400px; width: 1000px }
 	</style>
 	<script type="text/javascript"
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBskpEcwdyTf9uTqblPYNjdL-OFiLyXHbw&sensor=true">
@@ -33,7 +33,7 @@
 
 	function initialize() {
 	  var mapOptions = {
-	    zoom: 15
+	    zoom: 10
 	  };
 	  map = new google.maps.Map(document.getElementById('map-canvas'),
 	      mapOptions);
@@ -49,7 +49,7 @@
 	      var infowindow = new google.maps.InfoWindow({
 	        map: map,
 	        position: pos,
-	        content: 'You are here.'
+	        content: 'You are here'
 	      });
 
 	      map.setCenter(pos);

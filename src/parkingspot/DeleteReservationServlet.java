@@ -1,4 +1,4 @@
-package parking;
+package parkingspot;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -10,7 +10,6 @@ import com.google.appengine.api.users.UserServiceFactory;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.FetchOptions;
 
-
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -20,19 +19,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class DeleteReservationServlet extends HttpServlet{
-	 @Override
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
 	 public void doGet(HttpServletRequest req, HttpServletResponse resp)
 	                throws IOException {
 		 UserService userService = UserServiceFactory.getUserService();
 		 User user = userService.getCurrentUser();
+		 
 		 DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		 Key parkingKey = KeyFactory.createKey("Parking", "Parking");
-		 Date givenDate = new Date(req.getParameter("reservationDate"));
+		 @SuppressWarnings("deprecation")
+		Date givenDate = new Date(req.getParameter("reservationDate"));
 		 int amountOfHours = Integer.parseInt(req.getParameter("amountOfHours"));
 		 int markerID = Integer.parseInt(req.getParameter("markerID"));
 		 float longitude = Float.parseFloat(req.getParameter("longitude"));
 		 Float latitude = Float.parseFloat(req.getParameter("latitude"));
-		 Query query = new Query("Reservation", parkingKey).addFilter("user", Query.FilterOperator.EQUAL, user).
+		 @SuppressWarnings("deprecation")
+		Query query = new Query("Reservation", parkingKey).addFilter("user", Query.FilterOperator.EQUAL, user).
 				 										addFilter("markerID",Query.FilterOperator.EQUAL, markerID).
 				 										addFilter("reservationDate", Query.FilterOperator.EQUAL, givenDate).
 				 										addFilter("amountOfHours", Query.FilterOperator.EQUAL, amountOfHours).

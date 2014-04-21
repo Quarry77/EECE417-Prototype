@@ -1,8 +1,8 @@
-<!-- Indices written at Mon, 21 Apr 2014 11:01:32 GMT-08:00 -->
+<!-- Indices written at Mon, 21 Apr 2014 11:48:41 GMT-08:00 -->
 
 <datastore-indexes>
 
-    <!-- Used 5 times in query history -->
+    <!-- Used 7 times in query history -->
     <datastore-index kind="Reservation" ancestor="true" source="auto">
         <property name="user" direction="asc"/>
         <property name="reservationDate" direction="asc"/>

@@ -1,4 +1,4 @@
-package parking;
+package parkingspot;
 
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
@@ -17,7 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class SignGuestbookServlet extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
                 throws IOException {
         UserService userService = UserServiceFactory.getUserService();
@@ -39,7 +44,8 @@ public class SignGuestbookServlet extends HttpServlet {
         float userLatitude = Float.parseFloat(req.getParameter("userLatitude"));
         float userLongitude = Float.parseFloat(req.getParameter("userLongitude"));
         float measureAccuracy = Float.parseFloat(req.getParameter("measureAccuracy"));
-        Date reservationDate = new Date(year, month, day, hour, minute);
+        @SuppressWarnings("deprecation")
+		Date reservationDate = new Date(year, month, day, hour, minute);
         Date registerDate = new Date();
         Entity reservation = new Entity("Reservation", parkingKey);
         reservation.setProperty("user", user);
