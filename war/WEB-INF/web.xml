@@ -1,24 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5"
-         xmlns="http://java.sun.com/xml/ns/javaee">
-
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.prototype.server.GreetingServiceImpl</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/eece417_prototype/greet</url-pattern>
-  </servlet-mapping>
-  
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>EECE417_Prototype.html</welcome-file>
-  </welcome-file-list>
-
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Parking_prototype</servlet-name>
+		<servlet-class>parking.Parking_prototypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Parking_prototype</servlet-name>
+		<url-pattern>/parking_prototype</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	    <servlet-name>SignParkingServlet</servlet-name>
+	    <servlet-class>parking.SignGuestbookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>SignParkingServlet</servlet-name>
+	    <url-pattern>/sign_in</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	    <servlet-name>QueryProcessorServlet</servlet-name>
+	    <servlet-class>parking.QueryProcessorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>QueryProcessorServlet</servlet-name>
+	    <url-pattern>/queryprocessor/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	    <servlet-name>DeleteReservationServlet</servlet-name>
+	    <servlet-class>parking.DeleteReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>DeleteReservationServlet</servlet-name>
+	    <url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>guestbook.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
