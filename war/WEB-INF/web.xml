@@ -6,7 +6,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
 		<servlet-name>Parking_prototype</servlet-name>
-		<servlet-class>parking.Parking_prototypeServlet</servlet-class>
+		<servlet-class>parkingspot.ParkingPrototypeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Parking_prototype</servlet-name>
@@ -14,7 +14,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	<servlet>
 	    <servlet-name>SignParkingServlet</servlet-name>
-	    <servlet-class>parking.SignGuestbookServlet</servlet-class>
+	    <servlet-class>parkingspot.SignGuestbookServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 	    <servlet-name>SignParkingServlet</servlet-name>
@@ -22,7 +22,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	<servlet>
 	    <servlet-name>QueryProcessorServlet</servlet-name>
-	    <servlet-class>parking.QueryProcessorServlet</servlet-class>
+	    <servlet-class>parkingspot.QueryProcessorServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 	    <servlet-name>QueryProcessorServlet</servlet-name>
@@ -30,7 +30,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	<servlet>
 	    <servlet-name>DeleteReservationServlet</servlet-name>
-	    <servlet-class>parking.DeleteReservationServlet</servlet-class>
+	    <servlet-class>parkingspot.DeleteReservationServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 	    <servlet-name>DeleteReservationServlet</servlet-name>
